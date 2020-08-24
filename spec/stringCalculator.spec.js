@@ -1,7 +1,7 @@
-let myAdd = require("../calculator");
-let add = myAdd.add
+let sum = require("../calculator");
+let add = sum.add
 
-describe("add", () => {
+describe("adds numbers i a string", () => {
   it(`should return 0`, () => {
     expect(add("")).toBe(0);
   });
@@ -23,10 +23,10 @@ describe("add", () => {
   it(`should return 3`, () => {
     expect(add("//4\n142")).toBe(3);
   });
-  it(`should return  Negatives not allowed`, () => {
+  it(`should return  negatives numbers are  not allowed`, () => {
     expect(function () {
       add("-1,2,3,4")
-    }).toThrow("negatives not allowed -1")
+    }).toThrow("negatives numbers not allowed -1")
   });
   it(`should return 3`, () => {
     expect(add("//;\n1000;1;2")).toBe(3);
@@ -34,7 +34,7 @@ describe("add", () => {
   it(`should return 3`, () => {
     expect(add("//***\n1***2***3")).toBe(6);
   });
-  
+
   it(`should throw error`, () => {
     expect(add("-1,-2,3,4")).toThrow("negatives not allowed -1,-2");
   });
@@ -50,26 +50,26 @@ describe("add", () => {
   it(`should return 6`, () => {
     expect(add("//[:D][%]\n1:D2%3")).toBe(6);
   });
-  
+
   it(`should return 6`, () => {
     expect(add("[***][%%%]\n1***2%%%3")).toBe(6);
   });
-  
+
   it(`should return 6`, () => {
     expect(add("//[(-_-')][%]\n1(-_-')2%3")).toBe(6);
   });
 
-  it(`should throw error 2`, () => {
+  it(`should throw error `, () => {
     expect(add("//;\n1000;1;2;")).toThrow("Invalid input");
   });
 
-  it(`should throw error 3`, () => {
+  it(`should throw error `, () => {
     expect(add("   //;\n1000,1;2")).toThrow("Invalid input");
   });
 
-  it(`should throw error 4`, () => {
+  it(`should throw error `, () => {
     expect(add("1,2,3//;\n1000,1;2")).toThrow("Invalid input");
   });
-  
+
 
 });

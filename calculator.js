@@ -44,7 +44,7 @@ function add(str) {
         }
     }
     if (nagtiveNum.length > 0) {
-        throw ("nagtive numbers not allowed not allowed " + nagtiveNum);
+        throw ("nagtive numbers are not allowed " + nagtiveNum);
     }
     if (str.match(/\D$/) || isNaN(sum)) {
         throw Error("Invalid input")
