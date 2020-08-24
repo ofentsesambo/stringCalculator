@@ -52,23 +52,4 @@ function add(str) {
     return sum
 }
 
-console.log(add(""), " should be 0")
-console.log(add("1"), " should be 1")
-console.log(add("1,1"), " should be 2")
-console.log(add("1,2,3,4"), " should be 10")
-console.log(add("1\n2,3"), " should be 6")
-console.log(add("//;\n1;2"), " should be 3")
-console.log(add("//4\n142"), " should be 3")
-//console.log(add("-1,-2,-3,4"), " should throw error")
-console.log(add("//;\n1000;1;2"), " should be 3")
-console.log(add("//***\n1***2***3"), "should be 6")
-console.log(add("//[:D][%]\n1:D2%3"), "should be 6")
-console.log(add("//[***][%%%]\n1***2%%%3"), " should be 6")
-console.log(add("//[(-_-')][%]\n1(-_-')2%3"), "should be 6")
-console.log(add("//[abc][777][:(]\n1abc27773:(1"), "should be 7")
-//console.log(add("//;\n1000;1;2;"), "should throw invalid input")
-//console.log(add("   //;\n1000,1;2"))
-//console.log(add("1,2,3//;\n1000,1;2"))
-
-
 module.exports ={ add }
